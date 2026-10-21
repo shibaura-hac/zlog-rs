@@ -1,0 +1,68 @@
+[package]
+name = "zlog-gui"
+description = "zLog-style contest logging window for macOS and Windows."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "zlog-gui"
+path = "src/main.rs"
+
+[features]
+# Each extension crate is one feature; choose a build with --no-default-features --features ...
+default = ["score", "base", "rule-ja", "rule-dx", "qxsl", "maplot", "es", "ports", "update", "soumu", "cw", "check", "cluster", "scope", "keyer", "zserver", "rate", "summary"]
+base = ["dep:zlog-rule"]
+score = ["dep:zlog-score"]
+rule-ja = ["dep:zlog-rule-ja"]
+rule-dx = ["dep:zlog-rule-dx"]
+qxsl = ["dep:zlog-qxsl"]
+maplot = ["dep:zlog-maplot"]
+es = ["dep:zlog-es"]
+ports = ["dep:zlog-ports"]
+update = ["dep:zlog-update"]
+soumu = ["dep:zlog-soumu"]
+cw = ["dep:zlog-cw"]
+check = ["dep:zlog-check"]
+cluster = ["dep:zlog-cluster"]
+scope = ["dep:zlog-scope"]
+keyer = ["dep:zlog-keyer"]
+zserver = ["dep:zlog-zserver"]
+rate = ["dep:zlog-rate"]
+summary = ["dep:zlog-summary"]
+
+[dependencies]
+zlog-rule = { path = "../zlog-rule", optional = true }
+zlog-core = { path = "../zlog-core" }
+zlog-score = { path = "../zlog-score", optional = true }
+zlog-rule-ja = { path = "../zlog-rule-ja", optional = true }
+zlog-rule-dx = { path = "../zlog-rule-dx", optional = true }
+zlog-qxsl = { path = "../zlog-qxsl", optional = true }
+zlog-maplot = { path = "../zlog-maplot", optional = true }
+zlog-es = { path = "../zlog-es", optional = true }
+zlog-ports = { path = "../zlog-ports", optional = true }
+zlog-update = { path = "../zlog-update", optional = true }
+zlog-soumu = { path = "../zlog-soumu", optional = true }
+zlog-cw = { path = "../zlog-cw", optional = true }
+zlog-check = { path = "../zlog-check", optional = true }
+zlog-cluster = { path = "../zlog-cluster", optional = true }
+zlog-scope = { path = "../zlog-scope", optional = true }
+zlog-keyer = { path = "../zlog-keyer", optional = true }
+zlog-zserver = { path = "../zlog-zserver", optional = true }
+zlog-rate = { path = "../zlog-rate", optional = true }
+zlog-summary = { path = "../zlog-summary", optional = true }
+zlog-ui = { path = "../zlog-ui" }
+eframe = "0.37"
+fontdb = "0.23"
+egui = "0.37"
+egui_extras = "0.37"
+rfd = "0.17"
+chrono = "0.4"
+dirs = "7"
+zlog-rig = { path = "../zlog-rig", features = ["serial"] }
+zlog-rig-cat = { path = "../zlog-rig-cat" }
+zlog-rig-sim = { path = "../zlog-rig-sim" }
+
+[dev-dependencies]
+zlog-rule-ja = { path = "../zlog-rule-ja" }

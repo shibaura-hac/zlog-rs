@@ -1,0 +1,14 @@
+# English. Lines are `key = text`; {0}, {1} are filled in by the program.
+caption.ja0in = ALL JA0 (JA0)
+caption.ja0out = ALL JA0 (Others)
+caption.nyp = New Year Party
+caption.user = User-defined contest
+group.japan = Japan
+group.local = Local
+file.cfg = User-defined contest (CFG)
+file.dat_missing = DAT file {0} not found; the contest runs without its multiplier list
+caption.allja = ALL JA
+caption.sixdown = 6m & Down
+caption.fieldday = Field Day
+caption.acag = ACAG
+group.jarl = JARL
