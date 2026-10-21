@@ -1,0 +1,15 @@
+title = Cluster
+presets = Servers
+host = Host
+port = Port
+login = Login
+connect = Connect
+connecting = Connecting...
+disconnect = Disconnect
+auto_login = Auto login
+auto_reconnect = Auto reconnect
+retry = {0} seconds left to reconnect
+comment = Comment
+send_spot = Send spot
+command = Command
+local_echo = Local echo
